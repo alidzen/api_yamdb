@@ -13,5 +13,4 @@ RUN pip install -r /code/requirements.txt
 # скопировать всё содержимое директории, в которой лежит докерфайл, в директорию /code
 COPY . /code
 
-# при старте контейнера выполнить runserver
-CMD python /code/manage.py runserver 0:8000
+WORKDIR /code
