@@ -14,3 +14,5 @@ RUN pip install -r /code/requirements.txt
 COPY . /code
 
 WORKDIR /code
+
+CMD echo yes | python manage.py collectstatic && python manage.py migrate && python manage.py dumpdata > fixtures.json
